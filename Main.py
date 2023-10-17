@@ -8,14 +8,18 @@ Colour = (255,0,225)
 
 FPS = 30
 
+Player_One_Image = pygame.image.load('')
 
 def draw_window():
     WIN.fill(Colour)
     pygame.display.update()
 
+
 def main():
+    clock = pygame.time.Clock()
     run = True
     while run:
+        clock.tick(FPS)
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 run = False
