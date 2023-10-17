@@ -6,6 +6,8 @@ pygame.display.set_caption("Humza and Adam Game")
 
 Colour = (255,0,225)
 
+FPS = 30
+
 
 def draw_window():
     WIN.fill(Colour)
