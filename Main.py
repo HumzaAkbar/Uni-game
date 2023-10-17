@@ -1,4 +1,5 @@
 import pygame
+import os 
 
 WIDTH, HEIGHT = 900, 500
 WIN = pygame.display.set_mode((WIDTH, HEIGHT))
@@ -8,7 +9,10 @@ Colour = (255,0,225)
 
 FPS = 30
 
-Player_One_Image = pygame.image.load('')
+YELLOW_SPACESHIP_IMAGE = pygame.image.load(
+    os.path.join('Assets', 'spaceship_yellow.png'))
+RED_SPACESHIP_IMAGE = pygame.image.load(
+    os.path.join('Assets', 'spaceship_red.png'))
 
 def draw_window():
     WIN.fill(Colour)
