@@ -14,7 +14,8 @@ def main():
             if event.type == pygame.QUIT:
                 run = False
 
-        WIN.fill((Colour)) 
+        WIN.fill (Colour)
+        pygame.display.update()
 
     pygame.quit()
 
