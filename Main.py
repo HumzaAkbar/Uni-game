@@ -8,7 +8,7 @@ pygame.display.set_caption("Humza and Adam Game")
 Colour = (255,0,225)
 
 FPS = 30
-SPACESHIP_WIDTH, SPACESHIP_HEIGHT = 60, 40
+SPACESHIP_WIDTH, SPACESHIP_HEIGHT = 55, 40
 
 YELLOW_SPACESHIP_IMAGE = pygame.image.load(
     os.path.join('Assets', 'spaceship_yellow.png'))
@@ -19,7 +19,7 @@ RED_SPACESHIP = pygame.transform.scale(RED_SPACESHIP_IMAGE, (SPACESHIP_WIDTH, SP
 
 def draw_window():
     WIN.fill(Colour)
-    WIN.blit(YELLOW_SPACESHIP_IMAGE, (300, 100))
+    WIN.blit(YELLOW_SPACESHIP, (300, 100))
     pygame.display.update()
 
 
