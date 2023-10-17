@@ -17,7 +17,7 @@ RED_SPACESHIP_IMAGE = pygame.image.load(
 
 def draw_window():
     WIN.fill(Colour)
-    WIN.blit(YELLOW_SPACESHIP_IMAGE, ())
+    WIN.blit(YELLOW_SPACESHIP_IMAGE, (300, 100))
     pygame.display.update()
 
 
