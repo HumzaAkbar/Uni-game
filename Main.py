@@ -6,6 +6,9 @@ WIN = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Humza and Adam Game")
 
 Colour = (255,0,225)
+BLACK = (0, 0, 0)
+
+BORDER = pygame.Rect(WIDTH/2, 0, 10, HEIGHT)
 
 FPS = 60
 VEL = 5
@@ -23,6 +26,7 @@ RED_SPACESHIP = pygame.transform.rotate(pygame.transform.scale(
 
 def draw_window(red, yellow):
     WIN.fill(Colour)
+    pygame.draw.rect(WIN, BLACK, BORDER)
     WIN.blit(YELLOW_SPACESHIP, (yellow.x, yellow.y))
     WIN.blit(RED_SPACESHIP, (red.x, red.y))
     pygame.display.update()
