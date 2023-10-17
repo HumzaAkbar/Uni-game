@@ -8,8 +8,8 @@ Colour = (255,0,225)
 
 
 def draw_window():
-WIN.fill(Colour)
-pygame.display.update()
+    WIN.fill(Colour)
+    pygame.display.update()
 
 def main():
     run = True
