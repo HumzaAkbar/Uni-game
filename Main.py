@@ -12,16 +12,15 @@ WIN.fill(Colour)
 pygame.display.update()
 
 def main():
-
     run = True
     while run:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 run = False
-
-        WIN.fill (Colour)
-        pygame.display.update()
-
+        
+        
+        draw_window()
+    
     pygame.quit()
 
 if __name__ == "__main__": 
