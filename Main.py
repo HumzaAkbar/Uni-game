@@ -45,7 +45,7 @@ def yellow_handle_movement(keys_pressed, yellow):
 
 
 def red_handle_movement(keys_pressed, red):
-        if keys_pressed[pygame.K_LEFT]: # Left
+        if keys_pressed[pygame.K_LEFT] and yellow.x - VEL > 0: # Left
             red.x -= VEL
         if keys_pressed[pygame.K_RIGHT]: # Right
             red.x += VEL
