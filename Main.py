@@ -47,8 +47,8 @@ def yellow_handle_movement(keys_pressed, yellow):
 def red_handle_movement(keys_pressed, red):
         if keys_pressed[pygame.K_LEFT] and red.x - VEL > BORDER.x + BORDER.width: # Left
             red.x -= VEL
-        if keys_pressed[pygame.K_RIGHT] and red.x + VEL + red.width < BORDER.x: # Right
-            red.x += VEL
+        if keys_pressed[pygame.K_RIGHT] and red.x + VEL + red.width < WIDTH: # Right
+            red.x += VEL 
         if keys_pressed[pygame.K_UP] and red.y - VEL > 0: # Up
             red.y -= VEL
         if keys_pressed[pygame.K_DOWN] and red.y + VEL + red.height < HEIGHT - 15: # Down
