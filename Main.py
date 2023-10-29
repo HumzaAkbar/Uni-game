@@ -12,6 +12,7 @@ BORDER = pygame.Rect(WIDTH/2, 0, 10, HEIGHT)
 
 FPS = 60
 VEL = 5
+BULLET_VEL = 7 
 SPACESHIP_WIDTH, SPACESHIP_HEIGHT = 55, 40
 
 YELLOW_SPACESHIP_IMAGE = pygame.image.load(
@@ -57,6 +58,8 @@ def red_handle_movement(keys_pressed, red):
 def main():
     red = pygame.Rect(700, 300, SPACESHIP_WIDTH, SPACESHIP_HEIGHT)
     yellow = pygame.Rect(100, 300, SPACESHIP_WIDTH, SPACESHIP_HEIGHT)
+
+    bullets = []
 
     clock = pygame.time.Clock()
     run = True
