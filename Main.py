@@ -36,6 +36,8 @@ def draw_window(red, yellow, red_bullets, yellow_bullets):
     WIN.blit(RED_SPACESHIP, (red.x, red.y))
     pygame.display.update()
 
+    for bullet in red_bullets:
+        pygame.draw.rect(WIN)
 
 
 def yellow_handle_movement(keys_pressed, yellow):
