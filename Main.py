@@ -73,7 +73,7 @@ def main():
                  if event.key == pygame.K_LCTRL:  
                       
                       
-                      if event.key == pygame.K_RCTRL: 
+                      if event.key == pygame.K_RCTRL:
         
         
         keys_pressed = pygame.key.get_pressed()
