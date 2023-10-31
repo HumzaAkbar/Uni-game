@@ -60,7 +60,7 @@ def main():
     yellow = pygame.Rect(100, 300, SPACESHIP_WIDTH, SPACESHIP_HEIGHT)
 
     red_bullets = []
-    yellow_bullets
+    yellow_bullets =
 
     clock = pygame.time.Clock()
     run = True
@@ -72,7 +72,8 @@ def main():
 
             if event.type == pygame.KEYDOWN: 
                if event.key == pygame.K_LCTRL:
-                   
+                   bullet = pygame.Rect(yellow.x + yellow.width, yellow.y + yellow.height/2) 
+                   yellow_bullets.append
 
                    if event.key == pygame.K_RCTRL:
                  
