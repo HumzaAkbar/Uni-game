@@ -68,6 +68,12 @@ def main():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 run = False
+
+            if event.type == pygame.KEYDOWN:
+                 if event.key == pygame.K_LCTRL:   
+                      
+                      
+                      if event.key == pygame.K_RCTRL: 
         
         
         keys_pressed = pygame.key.get_pressed()
