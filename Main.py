@@ -7,6 +7,8 @@ pygame.display.set_caption("Humza and Adam Game")
 
 Colour = (255,0,225)
 BLACK = (0, 0, 0)
+RED = (225, 0, 0)
+YELLOW = (255, 255, 0)
 
 BORDER = pygame.Rect(WIDTH//2, 0, 10, HEIGHT)
 
