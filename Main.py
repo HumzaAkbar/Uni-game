@@ -29,7 +29,7 @@ RED_SPACESHIP_IMAGE = pygame.image.load(
 RED_SPACESHIP = pygame.transform.rotate(pygame.transform.scale(
     RED_SPACESHIP_IMAGE, (SPACESHIP_WIDTH, SPACESHIP_HEIGHT)), 270)
 
-def draw_window(red, yellow):
+def draw_window(red, yellow, red_bullets, yellow_bullets):
     WIN.fill(Colour)
     pygame.draw.rect(WIN, BLACK, BORDER)
     WIN.blit(YELLOW_SPACESHIP, (yellow.x, yellow.y))
