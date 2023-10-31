@@ -78,7 +78,7 @@ def main():
 
                    if event.key == pygame.K_RCTRL and len(red_bullets) < MAX_BULLETS:
                        bullet =pygame.Rect(red.x, red.y + red.height/2 - 2, 10,5)
-                       yellow_bullets.append(bullet)
+                       red_bullets.append(bullet)
     
         print(red_bullets, yellow_bullets)         
         keys_pressed = pygame.key.get_pressed()
