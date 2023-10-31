@@ -39,7 +39,10 @@ def draw_window(red, yellow, red_bullets, yellow_bullets):
     pygame.display.update()
 
     for bullet in red_bullets:
-        pygame.draw.rect(WIN)
+        pygame.draw.rect(WIN, RED, bullet)
+
+    for bullet in yellow_bullets:
+        pygame.draw.rect(WIN, YELLOW, bullet)
 
 
 def yellow_handle_movement(keys_pressed, yellow):
@@ -108,7 +111,7 @@ def main():
 
         handle_bullets(yellow_bullets, red_bullets, yellow, red)
 
-        draw_window(red, yellow)
+        draw_window(red, yellow, red_bullets, yellow_bullets)
     
     pygame.quit()
 
