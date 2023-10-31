@@ -59,7 +59,8 @@ def main():
     red = pygame.Rect(700, 300, SPACESHIP_WIDTH, SPACESHIP_HEIGHT)
     yellow = pygame.Rect(100, 300, SPACESHIP_WIDTH, SPACESHIP_HEIGHT)
 
-    bullets = []
+    red_bullets = []
+    yellow_bullets
 
     clock = pygame.time.Clock()
     run = True
@@ -69,13 +70,12 @@ def main():
             if event.type == pygame.QUIT:
                 run = False
 
-            if event.type == pygame.KEYDOWN:
-                 if event.key == pygame.K_LCTRL:  
-                      
-                      
-                      if event.key == pygame.K_RCTRL:
-        
-        
+            if event.type == pygame.KEYDOWN: 
+               if event.key == pygame.K_LCTRL:
+                   
+
+                   if event.key == pygame.K_RCTRL:
+                 
         keys_pressed = pygame.key.get_pressed()
         yellow_handle_movement(keys_pressed, yellow)
         red_handle_movement(keys_pressed, red)
