@@ -70,7 +70,7 @@ def main():
                 run = False
 
             if event.type == pygame.KEYDOWN:
-                 if event.key == pygame.K_LCTRL:   
+                 if event.key == pygame.K_LCTRL:  
                       
                       
                       if event.key == pygame.K_RCTRL: 
