@@ -133,8 +133,8 @@ def main():
             if event.type == pygame.KEYDOWN: 
                     if event.key == pygame.K_LCTRL and len(yellow_bullets) < MAX_BULLETS:
                         bullet = pygame.Rect(
-                       yellow.x + yellow.width, yellow.y + yellow.height//2 -2, 10, 5)
-                    yellow_bullets.append(bullet)
+                            yellow.x + yellow.width, yellow.y + yellow.height//2 -2, 10, 5)
+                        yellow_bullets.append(bullet)
                     #BULLET_FIRE_SOUND.play()
 
                     if event.key == pygame.K_RCTRL and len(red_bullets) < MAX_BULLETS:
