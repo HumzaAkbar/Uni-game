@@ -14,8 +14,8 @@ YELLOW = (255, 255, 0)
 
 BORDER = pygame.Rect(WIDTH//2 - 5, 0, 10, HEIGHT)
 
-BULLET_HIT_SOUND = pygame.mixer.Sound(os.path.join('Assets/Explosion.mp3'))
-BULLET_FIRE_SOUND = pygame.mixer.Sound(os.path.join('Assets/Lasershot.mp3'))
+BULLET_HIT_SOUND = pygame.mixer.Sound(os.path.join(''))
+BULLET_FIRE_SOUND = pygame.mixer.Sound(os.path.join(''))
 
 HEALTH_FONT = pygame.font.SysFont('arial', 40)
 WINNER_FONT = pygame.font.SysFont('arial', 100)
