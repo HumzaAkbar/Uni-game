@@ -34,7 +34,7 @@ RED_SPACESHIP = pygame.transform.rotate(pygame.transform.scale(
 SPACE = pygame.transform.scale(pygame.image.load(
     os.path.join('Assets', 'space.png')), (WIDTH, HEIGHT))
 
-def draw_window(red, yellow, red_bullets, yellow_bullets):
+def draw_window(red, yellow, red_bullets, yellow_bullets, red_health, yellow_health):
     WIN.blit(SPACE, (0, 0))
     pygame.draw.rect(WIN, BLACK, BORDER)
     WIN.blit(YELLOW_SPACESHIP, (yellow.x, yellow.y))
@@ -95,6 +95,9 @@ def main():
     red_bullets = []
     yellow_bullets = []
 
+    red_health = 10
+    yellow_health = 10
+
     clock = pygame.time.Clock()
     run = True
     while run:
@@ -109,17 +112,35 @@ def main():
                    yellow_bullets.append(bullet) 
 
                    if event.key == pygame.K_RCTRL and len(red_bullets) < MAX_BULLETS:
-                       bullet =pygame.Rect(red.x, red.y + red.height//2 - 2, 10,5)
+                       bullet =pygame.Rect(
+                           red.x, red.y + red.height//2 - 2, 10,5)
                        red_bullets.append(bullet)
     
-        print(red_bullets, yellow_bullets)         
+            if event.type == RED_HIT:
+                red_health -= 1
+
+            if event.type == YELLOW_HIT: 
+                yellow_health -= 1
+
+        winner_text = ""
+        if red_health <= 0:
+            winner_text = "Yellow is King"
+
+        if yellow_health <= 0:
+            winner_text = "Red is King"
+
+        if winner_text != "":
+
+
+    
+                
         keys_pressed = pygame.key.get_pressed()
         yellow_handle_movement(keys_pressed, yellow)
         red_handle_movement(keys_pressed, red)
 
         handle_bullets(yellow_bullets, red_bullets, yellow, red)
 
-        draw_window(red, yellow, red_bullets, yellow_bullets)
+        draw_window(red, yellow, red_bullets, yellow_bullets, red_health, yellow_health)
     
     pygame.quit()
 
