@@ -163,9 +163,7 @@ def main():
 
 
          keys_pressed = pygame.key.get_pressed() 
-        
          yellow_handle_movement(keys_pressed, yellow)
-         
          red_handle_movement(keys_pressed, red)
 
          handle_bullets(yellow_bullets, red_bullets, yellow, red)
