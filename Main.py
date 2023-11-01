@@ -89,7 +89,7 @@ def red_handle_movement(keys_pressed, red):
 def handle_bullets(yellow_bullets, red_bullets, yellow, red):
     for bullet in yellow_bullets:
         bullet.x += BULLET_VEL
-        if red.collidirect(bullet):
+        if red.colliderect(bullet):
             pygame.event.post(pygame.event.Event(RED_HIT))
             yellow_bullets.remove(bullet)
         elif bullet.x > WIDTH:
@@ -97,7 +97,7 @@ def handle_bullets(yellow_bullets, red_bullets, yellow, red):
 
     for bullet in red_bullets:
         bullet.x -= BULLET_VEL
-        if yellow.collidirect(bullet):
+        if yellow.colliderect(bullet):
             pygame.event.post(pygame.event.Event(YELLOW_HIT))
             red_bullets.remove(bullet)
         elif bullet.x < 0:
