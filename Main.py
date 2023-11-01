@@ -105,7 +105,7 @@ def draw_winner(text):
     WIN.blit(draw_text, (WIDTH/2 - draw_text.get_width()/
                          2, HEIGHT/2 - draw_text.get_height()/2))
     pygame.display.update 
-    pygame.time.delay(5000)
+    pygame.time.delay(3000)
 
 def main():
     red = pygame.Rect(700, 300, SPACESHIP_WIDTH, SPACESHIP_HEIGHT)
@@ -124,6 +124,7 @@ def main():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 run = False
+                pygame.quit()
 
             if event.type == pygame.KEYDOWN: 
                if event.key == pygame.K_LCTRL and len(yellow_bullets) < MAX_BULLETS:
@@ -149,6 +150,8 @@ def main():
             winner_text = "Red is King"
 
         if winner_text != "":
+            draw_winner(winner_text)
+            break
 
 
     
@@ -161,7 +164,7 @@ def main():
 
         draw_window(red, yellow, red_bullets, yellow_bullets, red_health, yellow_health)
     
-    pygame.quit()
+    main()
 
 if __name__ == "__main__": 
     main()
