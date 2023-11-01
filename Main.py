@@ -14,8 +14,8 @@ YELLOW = (255, 255, 0)
 
 BORDER = pygame.Rect(WIDTH//2 - 5, 0, 10, HEIGHT)
 
-BULLET_HIT_SOUND = pygame.mixer.Sound(os.path.join(''))
-BULLET_FIRE_SOUND = pygame.mixer.Sound(os.path.join(''))
+BULLET_HIT_SOUND = pygame.mixer.Sound(os.path.join('Assets/Grenade+1.mp3'))
+BULLET_FIRE_SOUND = pygame.mixer.Sound(os.path.join('Assets/Gun+Silencer.mp3'))
 
 HEALTH_FONT = pygame.font.SysFont('arial', 40)
 WINNER_FONT = pygame.font.SysFont('arial', 100)
@@ -168,7 +168,7 @@ def main():
 
          handle_bullets(yellow_bullets, red_bullets, yellow, red)
 
-        draw_window(red, yellow, red_bullets, yellow_bullets, red_health, yellow_health)
+         draw_window(red, yellow, red_bullets, yellow_bullets, red_health, yellow_health)
     
     main()
 
