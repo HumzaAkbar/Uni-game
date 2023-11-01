@@ -14,6 +14,7 @@ YELLOW = (255, 255, 0)
 BORDER = pygame.Rect(WIDTH//2 - 5, 0, 10, HEIGHT)
 
 HEALTH_FONT = pygame.font.SysFont('arial', 40)
+WINNER_FONT = pygame.font.SysFont('arial', 100)
 
 FPS = 30
 VEL = 5
@@ -99,7 +100,12 @@ def handle_bullets(yellow_bullets, red_bullets, yellow, red):
             red_bullets.remove(bullet)
 
 
-def draw_winner(text)
+def draw_winner(text):
+    draw_text = WINNER_FONT.render(text, 1, WHITE)
+    WIN.blit(draw_text, (WIDTH/2 - draw_text.get_width()/
+                         2, HEIGHT/2 - draw_text.get_height()/2))
+    pygame.display.update 
+    pygame.time.delay(5000)
 
 def main():
     red = pygame.Rect(700, 300, SPACESHIP_WIDTH, SPACESHIP_HEIGHT)
