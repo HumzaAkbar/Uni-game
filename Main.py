@@ -6,7 +6,7 @@ WIDTH, HEIGHT = 900, 500
 WIN = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Humza and Adam Game")
 
-Colour = (255,225,225)
+WHITE = (255,225,225)
 BLACK = (0, 0, 0)
 RED = (225, 0, 0)
 YELLOW = (255, 255, 0)
@@ -41,8 +41,10 @@ def draw_window(red, yellow, red_bullets, yellow_bullets, red_health, yellow_hea
     WIN.blit(SPACE, (0, 0))
     pygame.draw.rect(WIN, BLACK, BORDER)
 
-    red_health_text = HEALTH_FONT.render("Health: " + str(red_health), 1, WHITE)
-    yellow_health_text = HEALTH_FONT.render("Health: " + str(red_health), 1, WHITE)
+    red_health_text = HEALTH_FONT.render(
+        "Health: " + str(red_health), 1, WHITE)
+    yellow_health_text = HEALTH_FONT.render(
+        "Health: " + str(yellow_health), 1, WHITE)
     WIN.blit(red_health_text, (WIDTH - red_health_text.get_width() - 10, 10))
     WIN.blit(yellow_health_text, (10, 10))
 
@@ -96,6 +98,8 @@ def handle_bullets(yellow_bullets, red_bullets, yellow, red):
         elif bullet.x < 0:
             red_bullets.remove(bullet)
 
+
+def draw_winner(text)
 
 def main():
     red = pygame.Rect(700, 300, SPACESHIP_WIDTH, SPACESHIP_HEIGHT)
