@@ -5,14 +5,14 @@ WIDTH, HEIGHT = 900, 500
 WIN = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Humza and Adam Game")
 
-Colour = (255,0,225)
+Colour = (255,225,225)
 BLACK = (0, 0, 0)
 RED = (225, 0, 0)
 YELLOW = (255, 255, 0)
 
-BORDER = pygame.Rect(WIDTH//2, 0, 10, HEIGHT)
+BORDER = pygame.Rect(WIDTH//2 - 5, 0, 10, HEIGHT)
 
-FPS = 60
+FPS = 30
 VEL = 5
 BULLET_VEL = 7 
 MAX_BULLETS = 3 
@@ -36,13 +36,14 @@ def draw_window(red, yellow, red_bullets, yellow_bullets):
     pygame.draw.rect(WIN, BLACK, BORDER)
     WIN.blit(YELLOW_SPACESHIP, (yellow.x, yellow.y))
     WIN.blit(RED_SPACESHIP, (red.x, red.y))
-    pygame.display.update()
 
     for bullet in red_bullets:
         pygame.draw.rect(WIN, RED, bullet)
 
-    for bullet in yellow_bullets:
+    for bullet in yellow_bullets: 
         pygame.draw.rect(WIN, YELLOW, bullet)
+
+    pygame.display.update()
 
 
 def yellow_handle_movement(keys_pressed, yellow):
@@ -72,11 +73,15 @@ def handle_bullets(yellow_bullets, red_bullets, yellow, red):
         if red.collidirect(bullet):
             pygame.event.post(pygame.event.Event(RED_HIT))
             yellow_bullets.remove(bullet)
+        elif bullet.x > WIDTH:
+            yellow_bullets.remove(bullet)
 
-            for bullet in red_bullets:
-                bullet.x += BULLET_VEL
+    for bullet in red_bullets:
+        bullet.x -= BULLET_VEL
         if yellow.collidirect(bullet):
             pygame.event.post(pygame.event.Event(YELLOW_HIT))
+            red_bullets.remove(bullet)
+        elif bullet.x < 0:
             red_bullets.remove(bullet)
 
 
