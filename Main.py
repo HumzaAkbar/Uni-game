@@ -135,9 +135,10 @@ def main():
          keys_pressed = pygame.key.get_pressed() 
         
          yellow_handle_movement(keys_pressed, yellow)
+         
          red_handle_movement(keys_pressed, red)
 
-         handle_bullets(yellow_bullets, red_bullets, yellow, red)
+        handle_bullets(yellow_bullets, red_bullets, yellow, red)
 
         draw_window(red, yellow, red_bullets, yellow_bullets, red_health, yellow_health)
     
