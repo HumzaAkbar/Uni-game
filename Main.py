@@ -30,7 +30,7 @@ YELLOW_HIT = pygame.USEREVENT + 1
 RED_HIT = pygame.USEREVENT + 2 
 
 YELLOW_SPACESHIP_IMAGE = pygame.image.load(
-    os.path.join('Assets', 'spaceship_yellow.png'))
+    os.path.join('Assets', 'spaceship_yellow-3.png'))
 YELLOW_SPACESHIP = pygame.transform.rotate(pygame.transform.scale(
     YELLOW_SPACESHIP_IMAGE, (SPACESHIP_WIDTH, SPACESHIP_HEIGHT)), 90)
 
@@ -137,7 +137,7 @@ def main():
                         yellow_bullets.append(bullet)
                     #BULLET_FIRE_SOUND.play()
 
-                    if event.key == pygame.K_RCTRL and len(red_bullets) < MAX_BULLETS:
+                    if event.key == pygame.K_k and len(red_bullets) < MAX_BULLETS:
                         bullet =pygame.Rect(
                            red.x, red.y + red.height//2 - 2, 10,5)
                         red_bullets.append(bullet)
